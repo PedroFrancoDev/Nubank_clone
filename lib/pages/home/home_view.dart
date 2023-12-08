@@ -3,6 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_1/pages/home/model/header.dart';
+import 'package:flutter_application_1/utils/colors_standard.dart';
+
+import 'account/account_nubank.dart';
+import 'account/menu_items.dart';
+import 'creditsCard/my_credit_card.dart';
+import 'notifications/notifications.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -20,9 +26,31 @@ class _HomeViewState extends State<HomeView> {
       body: SingleChildScrollView(
         child: Container(
           color: Colors.white,
-          child: const Column(
+          child: Column(
             children: [
-              Header()
+              const Header(),
+              const AccountNubank(),
+              const MenuItems(),
+              Divider(
+                thickness: 1.6,
+                color: greyColor,
+                height: 22,
+              ),
+              const MyCreditCard(),
+              Divider(
+                thickness: 1.6,
+                color: greyColor,
+                height: 22,
+              ),
+              const Notifications(),
+              const SizedBox(
+                height: 10,
+              ),
+              Divider(
+                thickness: 1.6,
+                color: greyColor,
+                height: 22,
+              ),
             ],
           ),
         ),
