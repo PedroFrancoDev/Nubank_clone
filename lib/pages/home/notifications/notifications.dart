@@ -9,14 +9,55 @@ class Notifications extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Wrap(
-        children: [_income(isFirst: true), _income(), _income(), _income()],
+        children: [
+          _income(
+            isFirst: true,
+            descriptionBlack1: "Seu ",
+            descriptionBlack2: "2021 já está...",
+            descriptionYellow1: "informe de",
+            descriptionYellow2: "rendimento ",
+            context: context,
+          ),
+          _income(
+            isFirst: true,
+            descriptionBlack1: "Seu ",
+            descriptionBlack2: "2021 já está...",
+            descriptionYellow1: "informe de",
+            descriptionYellow2: "rendimento ",
+            context: context,
+          ),
+          _income(
+            isFirst: true,
+            descriptionBlack1: "Seu ",
+            descriptionBlack2: "2021 já está...",
+            descriptionYellow1: "informe de",
+            descriptionYellow2: "rendimento ",
+            context: context,
+          ),
+          _income(
+            isFirst: true,
+            descriptionBlack1: "Seu ",
+            descriptionBlack2: "2021 já está...",
+            descriptionYellow1: "informe de",
+            descriptionYellow2: "rendimento ",
+            context: context,
+          ),
+        ],
       ),
     );
   }
 
-  Widget _income({bool? isFirst}) {
+  Widget _income({
+    bool? isFirst,
+    required String descriptionBlack1,
+    required String descriptionBlack2,
+    required String descriptionYellow1,
+    required String descriptionYellow2,
+    required BuildContext context,
+  }) {
     return Container(
-      margin: EdgeInsets.only(right: 20, left: (isFirst ?? false) ? 20 : 0),
+      width: MediaQuery.of(context).size.width * .7,
+      margin: EdgeInsets.only(right: 16, left: (isFirst ?? false) ? 20 : 0),
       padding: const EdgeInsets.only(
         left: 20,
         top: 20,
@@ -24,20 +65,20 @@ class Notifications extends StatelessWidget {
         right: 40,
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: greyColor,
+        borderRadius: BorderRadius.circular(10),
+        color: yellow20,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              const Text(
-                "Seu ",
-                style: TextStyle(color: Colors.black),
+              Text(
+                descriptionBlack1,
+                style: const TextStyle(color: Colors.black),
               ),
               Text(
-                "informe de",
+                descriptionYellow1,
                 style: TextStyle(
                   color: backgroundColor,
                 ),
@@ -47,12 +88,12 @@ class Notifications extends StatelessWidget {
           Row(
             children: [
               Text(
-                "rendimento ",
+                descriptionYellow2,
                 style: TextStyle(
                   color: backgroundColor,
                 ),
               ),
-              const Text("2021 já está...")
+              Text(descriptionBlack2)
             ],
           )
         ],

@@ -17,7 +17,11 @@ class MyCreditCard extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         color: yellow20,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: backgroundColor,
+          width: 0.4,
+        ),
       ),
       child: Row(
         children: [
@@ -33,7 +37,7 @@ class MyCreditCard extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),
-          )
+          ),
         ],
       ),
     );

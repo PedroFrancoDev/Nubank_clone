@@ -31,8 +31,11 @@ class MenuItems extends StatelessWidget {
     );
   }
 
-  Widget _itemMenu(
-      {required IconData icon, required String title, bool? isFirst}) {
+  Widget _itemMenu({
+    required IconData icon,
+    required String title,
+    bool? isFirst,
+  }) {
     return Container(
       padding: EdgeInsets.only(
         right: 16,

@@ -2,12 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/pages/home/creditsCard/credit_card.dart';
 import 'package:flutter_application_1/pages/home/model/header.dart';
+import 'package:flutter_application_1/pages/home/securityLife/security_life.dart';
 import 'package:flutter_application_1/utils/colors_standard.dart';
 
 import 'account/account_nubank.dart';
 import 'account/menu_items.dart';
 import 'creditsCard/my_credit_card.dart';
+import 'investments/investiments.dart';
 import 'notifications/notifications.dart';
 
 class HomeView extends StatefulWidget {
@@ -27,6 +30,7 @@ class _HomeViewState extends State<HomeView> {
         child: Container(
           color: Colors.white,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Header(),
               const AccountNubank(),
@@ -46,6 +50,24 @@ class _HomeViewState extends State<HomeView> {
               const SizedBox(
                 height: 10,
               ),
+              Divider(
+                thickness: 1.6,
+                color: greyColor,
+                height: 22,
+              ),
+              const CreditCard(),
+              Divider(
+                thickness: 1.6,
+                color: greyColor,
+                height: 22,
+              ),
+              const Investiments(),
+              Divider(
+                thickness: 1.6,
+                color: greyColor,
+                height: 22,
+              ),
+              const SecurityLife(),
               Divider(
                 thickness: 1.6,
                 color: greyColor,
