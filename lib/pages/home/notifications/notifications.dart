@@ -8,6 +8,7 @@ class Notifications extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
+      
       child: Wrap(
         children: [
           _income(

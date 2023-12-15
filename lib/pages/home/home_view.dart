@@ -5,11 +5,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_application_1/pages/home/creditsCard/credit_card.dart';
 import 'package:flutter_application_1/pages/home/model/header.dart';
 import 'package:flutter_application_1/pages/home/securityLife/security_life.dart';
+import 'package:flutter_application_1/pages/home/shopping/shopping.dart';
 import 'package:flutter_application_1/utils/colors_standard.dart';
 
 import 'account/account_nubank.dart';
 import 'account/menu_items.dart';
 import 'creditsCard/my_credit_card.dart';
+import 'findOutMore/find_out_more.dart';
 import 'investments/investiments.dart';
 import 'notifications/notifications.dart';
 
@@ -73,6 +75,13 @@ class _HomeViewState extends State<HomeView> {
                 color: greyColor,
                 height: 22,
               ),
+              const Shopping(),
+              Divider(
+                thickness: 1.6,
+                color: greyColor,
+                height: 22,
+              ),
+              const FindOutMore(),
             ],
           ),
         ),

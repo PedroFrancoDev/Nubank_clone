@@ -10,7 +10,7 @@ class Investiments extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(
         horizontal: 20,
-        vertical: 16,
+        vertical: 12,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

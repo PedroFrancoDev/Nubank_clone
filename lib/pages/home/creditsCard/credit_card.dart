@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/colors_standard.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -13,6 +15,7 @@ class CreditCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(
         horizontal: 20,
+        vertical: 12,
       ),
       child: Wrap(
         crossAxisAlignment: WrapCrossAlignment.start,
@@ -22,7 +25,7 @@ class CreditCard extends StatelessWidget {
           Icon(
             MdiIcons.creditCard,
           ),
-          _textCreditCard(),
+          _textCreditCard(context),
           _invoice(),
           _disponibleLimit(),
           _installments(),
@@ -31,21 +34,24 @@ class CreditCard extends StatelessWidget {
     );
   }
 
-  Widget _textCreditCard() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Text(
-          "Cartão de crédito",
-          style: TextStyle(
-            fontSize: 19,
-            fontWeight: FontWeight.bold,
+  Widget _textCreditCard(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width - 38,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Text(
+            "Cartão de crédito",
+            style: TextStyle(
+              fontSize: 19,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        Icon(
-          MdiIcons.chevronRight,
-        ),
-      ],
+          Icon(
+            MdiIcons.chevronRight,
+          ),
+        ],
+      ),
     );
   }
 
