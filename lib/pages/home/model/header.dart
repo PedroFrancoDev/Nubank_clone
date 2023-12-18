@@ -80,6 +80,7 @@ class _HeaderState extends State<Header> {
       children: [
         GetBuilder<HomeViewController>(
           init: HomeViewController(),
+          // ignore: avoid_types_as_parameter_names, non_constant_identifier_names
           builder: (HomeViewController) {
             return IconButton(
               iconSize: 23,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/colors_standard.dart';
 
+// ignore: must_be_immutable
 class CardFindOutMoreModel extends StatelessWidget {
   String image;
   String title;

@@ -1,5 +1,6 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/colors_standard.dart';
+import 'package:go_router/go_router.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class MyCreditCard extends StatelessWidget {
@@ -7,38 +8,43 @@ class MyCreditCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 12,
-      ),
-      margin: const EdgeInsets.symmetric(
-        horizontal: 20,
-      ),
-      decoration: BoxDecoration(
-        color: yellow20,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(
-          color: backgroundColor,
-          width: 0.4,
+    return GestureDetector(
+      onTap: () {
+        context.push("/myCards");
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 12,
         ),
-      ),
-      child: Row(
-        children: [
-          Icon(
-            size: 23,
-            MdiIcons.creditCard,
+        margin: const EdgeInsets.symmetric(
+          horizontal: 20,
+        ),
+        decoration: BoxDecoration(
+          color: yellow20,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            color: backgroundColor,
+            width: 0.4,
           ),
-          const SizedBox(
-            width: 12,
-          ),
-          const Text(
-            "Meus cartões",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
+        ),
+        child: Row(
+          children: [
+            Icon(
+              size: 23,
+              MdiIcons.creditCard,
             ),
-          ),
-        ],
+            const SizedBox(
+              width: 12,
+            ),
+            const Text(
+              "Meus cartões",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

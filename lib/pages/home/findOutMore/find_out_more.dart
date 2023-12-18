@@ -50,10 +50,10 @@ class FindOutMore extends StatelessWidget {
             title: "Portabilidade de Salário",
           ),
           CardFindOutMoreModel(
-            buttonText: "Conhecer",
-            description: "Sua liberdade financeira \n começa com você...",
+            buttonText: "Inidicar",
+            description: "Mostre aos seu amigos \n como é facíl ter uma vida...",
             image: "assets/images/transferir.jpeg",
-            title: "Parcela compras no app",
+            title: "Indique seus amigos",
           ),
         ],
       ),

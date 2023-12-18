@@ -30,7 +30,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: _appBar(),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.white,
+          color: whiteColor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

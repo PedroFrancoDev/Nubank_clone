@@ -28,12 +28,7 @@ class _AccountNubankState extends State<AccountNubank> {
       ),
     );
   }
-
-  @override
-  void initState() {
-    
-  }
-
+  
   Widget _accountShevron() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,10 +53,11 @@ class _AccountNubankState extends State<AccountNubank> {
       init: HomeViewController(),
       builder: (controller) {
         return Text(
-          controller.seeBalance ? controller.balance : "** ** **",
+          controller.seeBalance ? controller.balance : "********",
           style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
+
           ),
         );
       },
